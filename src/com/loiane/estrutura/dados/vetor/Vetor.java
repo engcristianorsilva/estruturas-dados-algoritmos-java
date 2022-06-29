@@ -2,8 +2,6 @@ package com.loiane.estrutura.dados.vetor;
 
 import java.util.Arrays;
 
-import javax.swing.JOptionPane;
-
 public class Vetor {
 
 	private String[] elementos;
@@ -44,7 +42,7 @@ public class Vetor {
 	 * }
 	 */
 
-	public boolean adiciona(String elemento) { 
+	public boolean adiciona(String elemento) {
 		if (this.tamanho < this.elementos.length) {
 
 			this.elementos[this.tamanho] = elemento;
