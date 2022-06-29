@@ -25,25 +25,34 @@ public class Vetor {
 	 * corpo if } // fim do corpo for }// fim do corpo do metodo
 	 */
 
-	public void adiciona(String elemento) throws Exception { // Atenção na assinatura do método da exceção
+	/*
+	 * public void adiciona(String elemento) throws Exception { // Atenção na
+	 * assinatura do método da exceção if (this.tamanho < this.elementos.length) {
+	 * 
+	 * this.elementos[this.tamanho] = elemento; this.tamanho++;
+	 * JOptionPane.showMessageDialog(null,"Vetor adicionado");
+	 * 
+	 * } else {
+	 * 
+	 * Exception e = null; { e.printStackTrace();
+	 * 
+	 * JOptionPane.showMessageDialog(null,e);
+	 * JOptionPane.showMessageDialog(null,"não adicionado");
+	 * 
+	 * } }
+	 * 
+	 * }
+	 */
+
+	public boolean adiciona(String elemento) { 
 		if (this.tamanho < this.elementos.length) {
 
 			this.elementos[this.tamanho] = elemento;
 			this.tamanho++;
-			JOptionPane.showMessageDialog(null,"Vetor adicionado");
-			
-		} else { 
-			
-			Exception e = null;
-			{
-			e.printStackTrace();
-			
-			JOptionPane.showMessageDialog(null,e);
-			JOptionPane.showMessageDialog(null,"não adicionado");
-			
-			}
-		}
 
+			return true;
+		}
+		return false;
 	}
 
 	@Override
@@ -51,4 +60,4 @@ public class Vetor {
 		return "Vetor [elementos=" + Arrays.toString(elementos) + "]";
 	}
 
-}// fim de classe
+}
