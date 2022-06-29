@@ -11,4 +11,13 @@ public class Vetor {
 
 	}
 
+	public void adiciona(String elemento) {
+
+		for (int i = 0; i < this.elementos.length; i++) {
+			if (this.elementos[i] == null) {
+				this.elementos[i] = elemento;
+				break; // stop no loop do for
+			}
+		}
+	}
 }
